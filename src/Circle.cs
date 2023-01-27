@@ -1,6 +1,6 @@
 ﻿using mindbox;
 
-internal class Circle : IFigure
+public class Circle : IFigure
 {
     private double Length { get; } //Здесь как Радиус круга
     public string Name { get; }

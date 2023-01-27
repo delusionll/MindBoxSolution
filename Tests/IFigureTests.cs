@@ -1,4 +1,6 @@
 using mindbox;
+using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace mindboxTests
 {
@@ -10,7 +12,7 @@ namespace mindboxTests
         }
 
         [Test]
-        public void Area_3and4and5_6returned()
+        public void Triangle_Area_3and4and5_6returned() //Triangle unit test
         {
             double x = 3;
             double y = 5;
@@ -18,6 +20,15 @@ namespace mindboxTests
             IFigure q = new Triangle(x, z, y);
 
             Assert.That(q.Area(), Is.EqualTo(6));
+        }
+
+        [Test]
+        public void Circle_Area_PI_31returned()
+        {
+            double x = Math.PI;
+            IFigure w = new Circle(x);
+
+            Assert.That(Math.Round(w.Area()), Is.EqualTo(31));
         }
     }
 }
